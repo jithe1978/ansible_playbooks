@@ -1,0 +1,9 @@
+--- # ansible docs example
+- hosts: apacheweb
+  remote_user: user4
+ 
+  tasks:
+  - name: create dir
+    file: path=/var/tmp/kaka state=directory mode=0777 
+    become: yes
+    become_user: user4
